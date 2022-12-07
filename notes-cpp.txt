@@ -1,0 +1,1147 @@
+hackbot142 — 11/19/2022 6:57 AM
+I have gotten rusty I’m starting off very simple
+
+Download/install code blocks for my first c++ IDE
+
+Each line of code should be ended with a ;
+
+Write a hello world program 
+include <iostream>
+namespace std;
+int main ()
+{
+cout << “Hello World!” << endl;
+return 0;
+} 
+
+Play with what you have learned for a moment to generate other texts 
+hackbot142 — 11/19/2022 7:10 AM
+To store data in a variable you want to first select the type of data and tell that to the program
+
+Some quick examples 
+“Hello World!” Is a string or string
+17 is a integer or int
+
+There is many more we are just starting with string and int for simplicity 
+
+In this case it is string type data usually consisting of text
+string
+
+
+You then want to give it a name to be called upon by
+string characterName
+
+
+After this you can then give it a value which it will be equivalent to
+string characterName = “hackbot”; 
+ 
+hackbot142 — 11/19/2022 7:29 AM
+For example if i wanted to store an integer
+im guessing I’ll let you know if I got it right
+Integer = int so
+int characterAge = 17;
+ 
+hackbot142 — 11/19/2022 7:49 AM
+I got int exactly correct
+To set a variable but then set its value later you can 
+Define its type and name
+int newAge;
+
+
+End it off with a ; like usual 
+And call and assign it a value when needed 
+newAge = 18;
+And to call upon and use a variable you just call it’s name
+include <iostream>
+namespace std;
+int main ()
+{
+characterName = “hackbot”;
+cout << characterName << endl;
+return 0;
+} 
+
+Would output hackbot
+another guess 
+hackbot142 — 11/19/2022 8:05 AM
+If i wanted to attach my variable to a string that is already being printed i can use 
+<< to tell that to the program 
+
+In short 
+cout << “My name is “ << characterName << endl;
+
+
+Large example
+include <iostream>
+namespace std;
+int main ()
+{ 
+string characterName = “hackbot”;
+int characterAge = 17;
+int newAge = 18;
+cout << “My name is “ << characterName << “ I was “ << characterAge << “ but now I’m turning “ << newAge << endl;
+return 0;
+} 
+ 
+hackbot142 — 11/19/2022 8:19 AM
+Now if I want to change a variables value that is easy 
+
+int characterAge = 17;
+cout << characterAge << endl;
+characterAge = 18;
+cout << characterAge << endl;
+
+The first line would output 17 but the second it has been given the value 18 instead
+hackbot142 — 11/19/2022 8:30 AM
+Data types list
+This is all the different kinds of data you can store inside of a variable 
+char character = ‘C’; 
+Single character, use single quotes
+
+string texts = “multiple characters”;
+Multiple characters, use double quotes
+
+int fullNumber = 10;
+Full number, no decimals 
+
+float floatingPoint = 1.4;
+Floating point numbers
+
+double moreDecimals = 1.4;
+More common form of floating point best for use with decimals
+
+bool isAlive = true;
+True or false Boolean values
+ 
+hackbot142 — 11/19/2022 8:38 AM
+When looking at
+cout << “text” << endl;
+
+
+endl only means to print a new line under your last output
+
+cout << “text\n”;
+
+Essentially means the same thing \n specifying a new line 
+hackbot142 — 11/19/2022 8:46 AM
+String functions 
+A form of function used to get information on or modify strings
+
+.length()on the end of a string variable will tell you its length
+
+string[] will call upon the character in this position on the string starting from 0`
+
+You can even use [] to replace a character like this
+string characterName = “hackbot”;
+characterName[0] = ‘b’;
+
+It will now output backbot 
+hackbot142 — 11/19/2022 10:42 AM
+.find() on the end of a variable or string will allow you to find any character or set of characters in the string
+.substr() allows you to select out a section of the string from a specified point
+
+example
+#include <iostream>
+using namespace std;
+int main()
+{
+    string phrase = "Hackbot stream Server";
+    cout << phrase.substr(8, 6);
+    return 0;
+}
+
+will output "stream" 
+to take it into its own variable and store it on its own
+#include <iostream>
+using namespace std;
+int main()
+{
+    string phrase = "Hackbot stream Server";
+    string phrasesub;
+    phrasesub = phrase.substr(8, 6);
+    cout << phrasesub;
+    return 0;
+}
+
+will output "stream" also
+hackbot142 — 11/19/2022 11:01 AM
+math and numbers are incredibly easy to use in c++
+#include <iostream>
+using namespace std;
+int main()
+{
+    cout << 142 << endl;
+    cout << 71 * 2 << endl;
+    cout << 35.5 * 2 + 71 << endl;
+    return 0;
+}
+
+will out put "142"
+                     " 142"
+                      "142"
+and to put the numbers in variables you just use the appropriate types
+int = 142;
+float = 35.5;
+double  = 35.5;
+ 
+the modulus operator gives the remainder of a division for example
+cout << 10 % 3;
+will output 1 
+follows PEMDAS math rules 
+if you take a number in a variable and assign it ++ it increments it +1 
+int intNum = 141;
+intNum++;
+cout << intNum;
+will output 142 
+intNum--; would obviously work the same 
+you can also operate on it with +=, -=, *= etc 
+to use math functions you must import them like this
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+just edit your header like so
+some basic math functions are
+pow() to the power of
+sqrt() square root
+round() rounds the number for you
+ceil() rounds numbers up
+floor() rounds numbers down
+fmax() tells you what number is bigger
+fmin() tells you what number is smaller
+works with integers and decimals 
+hackbot142 — 11/19/2022 8:36 PM
+Upgrade to vscode in the morning 
+Write some files for submitting to class
+hackbot142 — 11/20/2022 3:55 AM
+Downloaded visual studio 
+Learned how to manage basic numbers strings and characters
+How to handle variables and basic functions how to make constant variables and how to do basic input and output
+Code pasted from discord does not run because of the font they use lmao
+hackbot142 — 11/20/2022 10:53 AM
+to get a string from user
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    string name;
+    cout << "Enter your name: ";
+    getline(cin, name);
+    cout << "Hello " << name << endl;
+
+    return 0;
+}
+ 
+simple calculator
+and getting number input from user
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    
+    int num1, num2;
+    cout << "Enter first number: ";
+    cin >> num1;
+
+    cout << "Enter second number: ";
+    cin >> num2;
+
+    cout << num1 + num2;
+
+
+    return 0;
+}
+hackbot142 — 11/20/2022 11:54 AM
+add 
+#include <string>
+
+to your code in order to get string input or it will be hell
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+int main()
+{
+    
+    string color, plural_noun, celebrity;
+
+    cout << "Enter a color: ";
+    getline(cin, color);
+    cout << "Enter a plural noun: ";
+    getline(cin, plural_noun);
+    cout << "Enter a celebrity: ";
+    getline(cin, celebrity);
+
+    cout << "Roses are " << color << endl;
+    cout << plural_noun << " are blue" << endl;
+    cout << "I love " << celebrity << "!" << endl;
+
+
+    return 0;
+}
+simple form
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+int main()
+{
+    
+    string name;
+    cout << "Enter a name: ";
+    getline(cin, name);
+    cout << "Your name is " << name;
+        
+
+    return 0;
+}
+to create an array you do this
+int numbers[] = { 1, 4, 2 };
+to call an item from the array you do this
+cout << numbers[0];
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+int main()
+{
+    
+    int numbers[] = { 1, 4, 2, 0};
+    numbers[3] = 142;
+
+    cout << numbers[3];
+        
+
+    return 0;
+}
+limit the number of items storable like this
+int numbers[142] = { 1, 4, 2, 0};
+how to create and call a simple function
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+void say_hi() {
+    cout << "Hello Hackbot!";
+}
+
+
+int main() {
+    say_hi();
+
+    return 0;
+}
+store it as a variable
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+void say_hi(string name) {
+    cout << "Hello " << name;
+}
+
+
+int main() {
+    say_hi("Hackbot!");
+
+    return 0;
+}
+hackbot142 — 11/20/2022 12:27 PM
+more functions but with output this time
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+double cube(double num) {
+    double result = num * num * num;
+    return result;
+}
+
+
+int main() {
+    double answer = cube(5.0);
+    cout << answer;
+
+    return 0;
+}
+if statement
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+int main() {
+    bool insignia_ontop = true;
+    if (insignia_ontop) {
+        cout << "Insignia on top!";
+    }
+    else {
+        cout << "Still ontop!";
+    }
+
+    return 0;
+}
+ 
+can also operate in if statement 
+if (insignia_ontop && elon_musk) { both
+if (insignia_ontop || elon_musk) { one or other
+if (insignia_ontop || !elon_musk) { to say one but not the other
+ 
+more if else shtuff
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+int main() {
+    bool insignia_ontop = true;
+    bool elon_musk = true;
+
+    if (insignia_ontop && elon_musk) {
+        cout << "Insignia on top!";
+    }
+    else if (insignia_ontop && !elon_musk) {
+        cout << "Where did elon go?";
+    }
+    else {
+        cout << "Still ontop!";
+    }
+
+    return 0;
+}
+hackbot142 — 11/20/2022 12:51 PM
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+int get_max(int num1, int num2) {
+    int result;
+    if (num1 > num2) {
+        result = num1;
+    }
+    else {
+        result = num2;
+    }
+
+    return result;
+}
+
+
+int main() {
+    cout << get_max(1, 4);
+
+    return 0;
+}
+if (num1 > num2)
+if (num1 < num2)
+if (num1 == num2)
+if (num1 != num2)
+
+etc 
+hackbot142 — 11/20/2022 12:59 PM
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+int get_max(int num1, int num2, int num3) {
+    int result;
+
+    if (num1 >= num2 && num1 != num3) {
+        result = num1;
+    }
+    else if (num2 >= num1 && num2 != num3) {
+        result = num2;
+    }
+    else {
+        result = num3;
+    }
+
+    return result;
+}
+
+
+int main() {
+    cout << get_max(1, 4, 2);
+
+    return 0;
+}
+hackbot142 — 11/20/2022 1:22 PM
+better simple calculator using if else statements
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+int main() {
+    int num1, num2;
+    char oper;
+
+    cout << "Enter first number: ";
+    cin >> num1;
+    cout << "Enter operator: ";
+    cin >> oper;
+    cout << "Enter second number: ";
+    cin >> num2;
+    int result{};
+
+    if (oper == '+') {
+        result = num1 + num2;
+    }
+    else if (oper == '-') {
+        result = num1 - num2;
+    }
+    else if (oper == '/') {
+        result = num1 / num2;
+    }
+    else if (oper == '*') {
+        result = num1 * num2;
+    }
+    else {
+        cout << "Oops something wasent compatible";
+    }
+    cout << result;
+
+    return 0;
+}
+hackbot142 — 11/20/2022 1:35 PM
+day of week checker showing how to use a switch instead of a if statement
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+string day_of_week(int day_number) {
+    string day;
+    switch (day_number) {
+    case 1:
+        day = "Sunday";
+        break;
+    case 2:
+        day = "Monday";
+        break;
+    case 3:
+        day = "Tuesday";
+        break;
+    case 4:
+        day = "Wednesday";
+        break;
+    case 5:
+        day = "Thursday";
+        break;
+    case 6:
+        day = "Friday";
+        break;
+    case 7:
+        day = "Saturday";
+        break;
+    default: 
+        day = "Invalid number!";
+    }
+
+    return day;
+}
+
+
+int main() {
+    int day;
+    cout << "Enter the day of the week 1-7: ";
+    cin >> day;
+    cout << "it is " << day_of_week(day) << "!";
+
+    return 0;
+}
+simple while loop
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+int main() {
+    int index = 1;
+    while (index <= 142) {
+        cout << index << endl;
+        index++;
+    }
+
+    return 0;
+}
+hackbot142 — 11/20/2022 2:22 PM
+simple guessing game
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+int main() {
+    int secret_number = 142;
+    int guess{};
+    
+    while (secret_number != guess) {
+        cout << "Whats my favorite number: ";
+        cin >> guess;
+    }
+
+    cout << "You win!";
+
+    return 0;
+}
+hackbot142 — 11/20/2022 2:35 PM
+more complicated of the same game 
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+int main() {
+    int secret_number = 142;
+    int guess{};
+    int guess_count = 0;
+    int guess_limit = 3;
+    bool lost_game = false;
+    
+    while (secret_number != guess && !lost_game) {
+        if (guess_count < guess_limit) {
+            cout << "Whats my favorite number: ";
+            cin >> guess;
+            guess_count++;
+        }  
+        else
+        {
+            lost_game = true;
+        }
+    }
+    if (lost_game == true) {
+        cout << "You lost the game!";
+    }
+    else
+    {
+        cout << "You win!";
+    }
+
+    return 0;
+}
+hackbot142 — 11/20/2022 2:43 PM
+for loop practice 
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        cout << i << endl;
+    }
+
+
+    return 0;
+}
+printing an array using a for loop
+int main() {
+
+    int num[] = {2, 5, 0, 2, 5};
+
+    for (int i = 0; i < 5; i++) {
+        cout << num[i] << endl;
+    }
+
+
+    return 0;
+}
+hackbot142 — 11/20/2022 2:54 PM
+to the power of script 
+int power(int base_num, int pow_num) {
+    int result = 1;
+    for (int i = 0; i < pow_num; i++) {
+        result = result * base_num;
+    }
+
+    return result;
+}
+
+
+int main() {
+    cout << power(1, 4);
+
+    return 0;
+}
+hackbot142 — 11/20/2022 3:04 PM
+2d arrays for storing arrays within arrays 
+int main() {
+
+    int grid_num[3][2] = {
+        {1, 2},
+        {3, 4},
+        {5, 6}
+    };
+
+    return 0;
+}
+nested for loops and using them to print the 2d array 
+int main() {
+
+    int grid_num[3][2] = {
+        {1, 2},
+        {3, 4},
+        {5, 6}
+    };
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 2; j++) {
+            cout << grid_num[i][j] << endl;
+        }
+    }
+
+    return 0;
+}
+hackbot142 — 11/20/2022 3:19 PM
+commenting 
+// for single line comment
+
+/*
+for
+multi
+line
+comment
+*/
+hackbot142 — 11/20/2022 3:26 PM
+to print the memory address of a variable you use 
+&
+like this
+int main() {
+
+    int age = 18;
+    double gpa = 1.0;
+    string name = "Hackbot";
+
+    cout << &age;
+
+    return 0;
+}
+this memory address is called a pointer
+hackbot142 — 11/20/2022 3:35 PM
+int main() {
+
+    int age = 18;
+    double gpa = 1.0;
+    string name = "Hackbot";
+    int *p_age = &age;
+    double *p_gpa = &gpa;
+    string *p_name = &name;
+    
+    cout << "Age: " << p_age << endl << "Gpa: " << p_gpa << endl << "Name: " << p_name;
+
+    return 0;
+}
+hackbot142 — 11/20/2022 3:52 PM
+classes and objects
+class is like the variable that stores what it is
+object is it being implemented inside the code
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+class Book {
+    public:
+        string title;
+        string author;
+        short pages;
+};
+
+
+int main () {
+
+    Book book1;
+    book1.title = "hackbots win";
+    book1.author = "hackbot";
+    book1.pages = 6969;
+
+    cout << book1.title << endl << book1.author << endl << book1.pages;
+
+    return 0;
+}
+hackbot142 — 11/20/2022 4:01 PM
+compacted
+class Book {
+    public:
+        string title;
+        string author;
+        short pages;
+        Book(string a_title, string a_author, int a_pages) {
+            title = a_title;
+            author = a_author;
+            pages = a_pages;
+        }
+};
+
+
+int main () {
+
+    Book book1("hackbots win", "hackbot", 6969);
+
+    cout << book1.title << endl << book1.author << endl << book1.pages;
+
+    return 0;
+}
+hackbot142 — 11/20/2022 5:25 PM
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+class Student {
+    public:
+        string name;
+        string major;
+        double gpa;
+        Student(string a_name, string a_major, double a_gpa) {
+            name = a_name;
+            major = a_major;
+            gpa = a_gpa;
+        }
+
+        bool has_honors() {
+            if (gpa >= 3.5) {
+                return true;
+            }
+            return false;
+        }
+};
+
+
+int main () {
+
+    Student student1("Jim", "Buisness", 2.4);
+    Student student2("Pam", "Art", 3.6);
+
+    cout << student2.has_honors();
+
+    return 0;
+}
+hackbot142 — 11/20/2022 5:41 PM
+small class i wrote to represent a speaker
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+class Speakers {
+    public:
+        string brand;
+        double watts;
+        double size;
+        Speakers(string a_brand, double a_watts, double a_size) {
+            brand = a_brand;
+            watts = a_watts;
+            size = a_size;
+        }
+};
+
+int main () {
+    Speakers speaker1("JBL", 400.6, 12);
+
+    cout << speaker1.brand << endl << speaker1.watts << endl << speaker1.size;
+
+    return 0;
+}
+hackbot142 — 11/20/2022 6:00 PM
+using namespace std;
+
+
+class Movie {
+    private:
+        string rating;
+    public:
+        string title;
+        string director;
+        Movie(string a_title, string a_director, string a_rating) {
+            title = a_title;
+            director = a_director;
+            rating = a_rating;
+        }
+        void set_rating (string a_rating){
+            if (a_rating == "G" || a_rating == "PG" || a_rating == "PG-13" ||  a_rating == "R" || a_rating == "NR") {
+                rating = a_rating;
+            }
+            else {
+                rating = "NR";
+            }
+        }
+        string get_rating() {
+            return rating;
+        }
+};
+
+
+int main () {
+
+    Movie avengers("The Avengers", "Joss Whedon", "PG-13");
+
+    cout << avengers.get_rating();
+
+    return 0;
+}
+hackbot142 — 11/20/2022 6:08 PM
+how to make a class inherit all traits of another class
+class italian_chef : public Chef {
+
+};
+hackbot142 — 11/20/2022 6:15 PM
+inheritance with classes
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+class Chef {
+public:
+    void make_chicken() {
+        cout << "The chef makes Chicken" << endl;
+    }
+    void make_salad() {
+        cout << "The chef makes Salad" << endl;
+    }
+    void make_special_dish() {
+        cout << "The chef makes Bbq Ribs" << endl;
+    }
+
+        
+};
+
+class italian_chef : public Chef {
+public:
+    void make_pasta() {
+        cout << "The italian chef makes Pasta";
+    }
+    void make_special_dish() {
+        cout << "The chef makes lasagna" << endl;
+    }
+};
+
+
+int main () {
+    Chef chef;
+    chef.make_chicken();
+    italian_chef italian_chef;
+    italian_chef.make_chicken(); // has inherited chefs chicken
+    italian_chef.make_pasta();
+    italian_chef.make_special_dish();
+
+    return 0;
+}
+hackbot142 — 11/21/2022 4:23 PM
+use structs to store multiple data items like an array but any data types mixed!
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+struct speaker {
+    string brand;
+    short watts;
+    short size;
+};
+
+int main () {
+    
+    speaker JBL;
+    JBL.brand = "JBL";
+    JBL.watts = 200;
+    JBL.size = 20;
+
+    cout << JBL.brand << endl << JBL.watts << endl << JBL.size;
+
+    return 0;
+}
+hackbot142 — 11/21/2022 4:40 PM
+use templates to use different data types with the same function
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+template <typename T>
+T get_max(T x, T y) {
+    return x > y ? x : y;
+};
+
+int main () {
+
+    int x = 18, y = 20;
+    cout << get_max <int> (x, y) << endl;
+
+    char c = 'a', c2 = 'x';
+    cout << static_cast <char> (get_max <char> (c, c2)) << endl;
+
+    return 0;
+}
+hackbot142 — 11/21/2022 4:51 PM
+static_cast 
+is used to specify a compile time variable such as a data type
+hackbot142 — 11/22/2022 4:20 PM
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+
+
+class Person {   // classes are awesome it lets you define your own type of data type object
+    public:
+        string name;
+        int age = 0;
+        void say_hi() {
+            cout << "Hello " << name << ", Enter the details of your speaker below!" << endl; // i can even put other code inside of the class
+        }
+        void calculate() {
+            
+            int calc_0, calc_1;
+            char oper;
+
+            cout << "Enter first number: ";
+            cin >> calc_0;
+            cout << "Enter operator [ + - * / ]: ";
+            cin >> oper;
+            cout << "Enter second number: ";
+            cin >> calc_1;
+            
+            int result = 0;
+            if (oper == '+') {
+                result = calc_0 + calc_1;
+            }
+            else if (oper == '-') {
+                result = calc_0 - calc_1;
+            }
+            else if (oper == '*') {
+                result = calc_0 * calc_1;
+            }
+            else if (oper == '/') {
+                result = calc_0 / calc_1;
+            }
+            else {
+                cout << "Invalid operator!" << endl;
+            }
+            cout << result << endl;
+        }
+};
+
+
+struct speaker { // struct does basicaly what i used the first part of the class Person for
+    string brand;
+    short watts = 0;
+    short size = 0;
+};
+
+
+
+int main () {
+
+    // declaring as many types of variables as i can think of
+    string text_string = "trying to use everything i have learned";
+    int number_int = 142;
+    short number_short = 141;
+    const short number_constant = 142; // will not be changable after this point
+    double number_double = 142.0;
+    float number_float = 142.0;
+    bool boolean = false;
+    number_short++;                    // corrects nunmber_short to 142 by incrementing by +1 or -1
+      
+    
+    int simple_array[3] = {1, 4, 2};
+    int two_d_array[3][3]{
+        {1, 4, 2},          
+        {1, 4, 2},                
+        {1, 4, 2}        
+    };
+        /* 
+        multi line comment 
+        also these 2d arrays are great because 
+        they store another array inside of them
+        */
+
+    Person hackbot;             // this is a class
+    hackbot.name = "hackbot";   // here i defined myself inside of this class as my name and my age  
+    hackbot.age = 18;           // and i could do this for anyone or change the data types accepted
+    hackbot.say_hi();           // calling on the little code in the class
+
+
+    speaker senheiser;              //this is a struct it stores data exactly like the class above
+    cout << "Enter speaker brand: ";
+    getline(cin, senheiser.brand);      // getline for strings
+    cout << "Enter speaker watts: ";
+    cin >> senheiser.watts;             // cin >> for numbers
+    cout << "Enter speaker size: ";
+    cin >> senheiser.size;              // cin >> for numbers remember it
+
+    cout << "Brand: " << senheiser.brand << endl << "Watts: " << senheiser.watts << endl << "Size: " << senheiser.size << endl;
+
+
+    int *p_pointer = &number_int;
+    cout << p_pointer << " pointer value" << endl; // pointers are the memory address of the data 
+
+    hackbot.calculate();
+
+    int index = 0;
+    while (index != 10) {
+        cout << text_string << ": " << index << endl;
+        index++;
+    }
+
+    for (int i = 0; i < 10; i++)
+    {
+        cout << text_string << ": " << i << endl;
+    }
+
+    return 0;
+}
+ 
+threw together a bunch of stuff for practice to see what i could remember and deal with without encountering bugs
