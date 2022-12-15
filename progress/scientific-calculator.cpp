@@ -13,7 +13,7 @@ int main() {
       break;
     }
 
-    cout << "Enter two operands: ";
+    cout << "Enter two numbers: ";
     double x, y;
     cin >> x >> y;
 
