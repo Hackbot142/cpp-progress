@@ -5,7 +5,7 @@
 using namespace std;
 
 
-string day_of_week(int day_number) {    // using as an example usecase for switch/case/break
+string day_of_week(int day_number) {
     string day;
     switch (day_number) {
     case 1:
